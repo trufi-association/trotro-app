@@ -199,7 +199,7 @@ packages:
     source: hosted
     version: "1.2.0"
   global_configuration:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: global_configuration
       url: "https://pub.dartlang.org"
@@ -621,7 +621,7 @@ packages:
     description:
       path: "."
       ref: "feat/293-generalize-code"
-      resolved-ref: adc3fef5d55193c410e51e36e8f92e67a1f80632
+      resolved-ref: fa4cfe9d626eaafe333f179a56877d80649b2734
       url: "https://github.com/trufi-association/trufi-app.git"
     source: git
     version: "0.0.1"
