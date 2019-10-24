@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   trufi_core:
     git:
@@ -26,6 +28,8 @@ dependencies:
       ref: feat/293-generalize-code
 
   global_configuration: 1.2.0
+  intl: 0.15.8
+  intl_translation: 0.17.5
 
 dev_dependencies:
   flutter_test:

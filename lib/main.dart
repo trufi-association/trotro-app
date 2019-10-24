@@ -4,6 +4,8 @@ import 'package:latlong/latlong.dart';
 import 'package:trufi_core/trufi_configuration.dart';
 import 'package:trufi_core/trufi_app.dart';
 
+import 'package:trotro_app/localization.dart';
+
 void main() async {
   final trufiCfg = TrufiConfiguration();
   final globalCfg = GlobalConfiguration();
@@ -122,5 +124,15 @@ void main() async {
   trufiCfg.url.instagram = globalCfg.getString("urlInstagram");
 
   // Run app
-  runApp(TrufiApp());
+  runApp(
+    TrufiApp(
+      theme: ThemeData(
+        primaryColor: const Color(0xff263238),
+        accentColor: const Color(0xffd81b60),
+        backgroundColor: Colors.white,
+        primaryColorLight: const Color(0xffeceff1),
+      ),
+      localization: Localization(),
+    ),
+  );
 }
