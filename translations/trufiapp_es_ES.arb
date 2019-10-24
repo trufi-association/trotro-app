@@ -1,17 +1,17 @@
 {
-  "title": "Trufi App",
+  "title": "Trotro App",
   "@title": {
     "description": "The application's name",
     "type": "text",
     "placeholders": {}
   },
-  "tagline": "Transporte público en Cochabamba",
+  "tagline": "Transporte público en Accra",
   "@tagline": {
     "description": "A short marketing sentence that describes the app",
     "type": "text",
     "placeholders": {}
   },
-  "description": "La mejor forma de viajar con trufis, micros y buses a través de Cochabamba.",
+  "description": "La mejor forma de viajar con trufis, micros y buses a través de Accra.",
   "@description": {
     "description": "A sentence that describes the application's purpose",
     "type": "text",
@@ -459,7 +459,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "aboutContent": "Somos un equipo boliviano e internacional de personas que amamos y apoyamos el transporte público. Desarrollamos esta aplicación para facilitar el uso del transporte en la región de Cochabamba.",
+  "aboutContent": "Somos un equipo boliviano e internacional de personas que amamos y apoyamos el transporte público. Desarrollamos esta aplicación para facilitar el uso del transporte en la región de Accra.",
   "@aboutContent": {
     "description": "Text displayed on the about page",
     "type": "text",
@@ -477,7 +477,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "teamContent": "Somos un equipo internacional llamado Trufi Association y hemos desarrollado esta app con la ayuda de muchos voluntarios. ¿Quieres mejorar la Trufi App y ser parte de nuestro equipo? Contáctanos a:",
+  "teamContent": "Somos un equipo internacional llamado Trufi Association y hemos desarrollado esta app con la ayuda de muchos voluntarios. ¿Quieres mejorar la Trotro App y ser parte de nuestro equipo? Contáctanos a:",
   "@teamContent": {
     "description": "Text displayed on the team page, followed by a email link",
     "type": "text",

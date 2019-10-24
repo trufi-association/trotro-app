@@ -1,19 +1,19 @@
 {
   "@@locale": "en_US",
   "@@last_modified": "2019-10-24T14:23:31.541614",
-  "title": "Trufi App",
+  "title": "Trotro App",
   "@title": {
     "description": "The application's name",
     "type": "text",
     "placeholders": {}
   },
-  "tagline": "Public transportation in Cochabamba",
+  "tagline": "Public transportation in Accra",
   "@tagline": {
     "description": "A short marketing sentence that describes the app",
     "type": "text",
     "placeholders": {}
   },
-  "description": "The best way to travel with trufis, micros and busses through Cochabamba.",
+  "description": "The best way to travel with trufis, micros and busses through Accra.",
   "@description": {
     "description": "A sentence that describes the application's purpose",
     "type": "text",
@@ -455,13 +455,13 @@
     "type": "text",
     "placeholders": {}
   },
-  "shareAppText": "Download Trufi App, the public transport app for Cochabamba, at {url}",
+  "shareAppText": "Download Trotro App, the public transport app for Accra, at {url}",
   "@shareAppText": {
     "description": "Text with URL that is used when sharing the app.",
     "type": "text",
     "placeholders": {
       "url": {
-        "example": "https://trufi.share.url"
+        "example": "https://trotro.share.url"
       }
     }
   },
@@ -477,7 +477,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "aboutContent": "We are a bolivian and international team of people that love and support public transport. We have developed this app to make it easy for people to use the transport system in Cochabamba and the surrounding area.",
+  "aboutContent": "We are a bolivian and international team of people that love and support public transport. We have developed this app to make it easy for people to use the transport system in Accra and the surrounding area.",
   "@aboutContent": {
     "description": "Text displayed on the about page",
     "type": "text",
@@ -495,7 +495,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "teamContent": "We are an international team called Trufi Association that has created this app with the help of many volunteers! Do you want to improve the Trufi App and be part of our team? Please contact us via:",
+  "teamContent": "We are an international team called Trufi Association that has created this app with the help of many volunteers! Do you want to improve the Trotro App and be part of our team? Please contact us via:",
   "@teamContent": {
     "description": "Text displayed on the team page, followed by a email link",
     "type": "text",
@@ -574,7 +574,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "appReviewDialogTitle": "Enjoying Trufi?",
+  "appReviewDialogTitle": "Enjoying Trotro?",
   "@appReviewDialogTitle": {
     "description": "Title of the App Review Dialog used on Android",
     "type": "text",
