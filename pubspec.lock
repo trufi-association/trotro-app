@@ -621,7 +621,7 @@ packages:
     description:
       path: "."
       ref: "feat/293-generalize-code"
-      resolved-ref: "7be42843657b0ecb54e8c79a7a8aa7b020c1ab3c"
+      resolved-ref: "20ff1fb9ee729d65dff5b796c85ca540eda504e9"
       url: "https://github.com/trufi-association/trufi-app.git"
     source: git
     version: "0.0.1"
