@@ -126,7 +126,6 @@ void main() async {
   trufiCfg.url.donate = globalCfg.getString("urlDonate");
   trufiCfg.url.website = globalCfg.getString("urlWebsite");
   trufiCfg.url.facebook = globalCfg.getString("urlFacebook");
-  trufiCfg.url.instagram = globalCfg.getString("urlInstagram");
   trufiCfg.url.twitter = globalCfg.getString("urlTwitter");
 
   // Run app
