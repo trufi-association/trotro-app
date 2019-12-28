@@ -133,7 +133,7 @@ void main() async {
     TrufiApp(
       theme: ThemeData(
         primaryColor: const Color(0xff263238),
-        accentColor: const Color(0xffd81b60),
+        accentColor: const Color(0xffc01100),
         backgroundColor: Colors.white,
         primaryColorLight: const Color(0xffeceff1),
       ),
