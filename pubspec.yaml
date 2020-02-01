@@ -24,12 +24,12 @@ dependencies:
 
   trufi_core:
     git:
-      url: https://github.com/trufi-association/trufi-app.git
-      ref: feat/293-generalize-code
+      url: https://github.com/trufi-association/trufi-core.git
+      ref: master
 
   global_configuration: 1.2.0
-  intl: 0.15.8
-  intl_translation: 0.17.5
+  intl: 0.16.0
+  intl_translation: 0.17.7
 
 dev_dependencies:
   flutter_test:
