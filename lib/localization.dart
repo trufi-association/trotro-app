@@ -419,6 +419,12 @@ class Localization implements TrufiLocalization {
         examples: const {"value": 10},
       );
 
+  String instructionVehicleLightRail() => Intl.message(
+    "Light Rail Train",
+    name: "instructionVehicleLightRail",
+    desc: "Vehicle name (Light Rail Train)",
+  );
+
   String instructionDistanceKm(num value) => Intl.message(
         "$value km",
         name: "instructionDistanceKm",

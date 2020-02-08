@@ -1,3 +1,8 @@
+# Trotro
+assets/cfg/
+android/key.properties
+android/keystore/
+
 # Miscellaneous
 *.class
 *.log
