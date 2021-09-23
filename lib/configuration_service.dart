@@ -49,7 +49,7 @@ Configuration setupConfiguration() {
 
   // Urls
   final urls = UrlCollection(
-    openTripPlannerUrl: "https://accra.trufi.dev/otp/routers/default",
+    openTripPlannerUrl: "",
   );
 
   // Map
