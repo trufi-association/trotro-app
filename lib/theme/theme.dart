@@ -9,7 +9,7 @@ final trotroTheme = ThemeData(
         bodyText1: const TextStyle(color: Color(0xFF000000)),
         bodyText2: const TextStyle(color: Color(0xff263238)),
         headline6: const TextStyle(color: Colors.white),
-        subtitle1: const TextStyle(color: Colors.white),
+        subtitle1: const TextStyle(color:  Color(0xff263238)),
       ),
   primaryTextTheme: ThemeData.light().primaryTextTheme.copyWith(
         headline6: const TextStyle(color: Colors.white),
