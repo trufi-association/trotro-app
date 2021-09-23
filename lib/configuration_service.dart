@@ -50,6 +50,7 @@ Configuration setupConfiguration() {
   // Urls
   final urls = UrlCollection(
     openTripPlannerUrl: "",
+    routeFeedbackUrl: "https://trufifeedback.z15.web.core.windows.net/route.html",
   );
 
   // Map
@@ -79,14 +80,16 @@ Configuration setupConfiguration() {
 
   final customTranslations = TrufiCustomLocalizations()
     ..title = {
-      const Locale("en", "US"): "Trotro App"
+      const Locale("de"): "Trotro App",
+      const Locale("en"): "Trotro App",
+      const Locale("es"): "Trotro App",
+      const Locale("fr"): "Trotro App",
+      const Locale("it"): "Trotro App",
+      const Locale("qu"): "Trotro App",
     };
-    // ..tagline = {
-    //   const Locale("de"): "Tagline (German)",
-    //   const Locale("en", "US"): "Tagline (English)"
-    // };
 
   return Configuration(
+    appCity: "Accra",
     customTranslations: customTranslations,
     supportedLanguages: languages,
     teamInformationEmail: "info@trufi.app",
