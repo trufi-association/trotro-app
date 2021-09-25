@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:trufi_core/models/map_tile_provider.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
+class CachedTileProvider extends TileProvider {
+  const CachedTileProvider();
+  @override
+  ImageProvider getImage(Coords<num> coords, TileLayerOptions options) {
+    return CachedNetworkImageProvider(getTileUrl(coords, options));
+  }
+}
 
 enum MapLayerIds {
   streets,
@@ -22,11 +31,13 @@ Map<MapLayerIds, List<LayerOptions>> mapLayerOptions = {
   MapLayerIds.streets: [
     TileLayerOptions(
       urlTemplate: "https://accra.trufi.dev/tiles/streets/{z}/{x}/{y}@2x.png",
+      tileProvider: const CachedTileProvider(),
     ),
   ],
   MapLayerIds.osm: [
     TileLayerOptions(
       urlTemplate: "https://accra.trufi.dev/tiles/osm-bright/{z}/{x}/{y}.png",
+      tileProvider: const CachedTileProvider(),
     ),
   ],
 };
