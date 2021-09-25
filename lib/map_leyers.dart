@@ -36,7 +36,8 @@ Map<MapLayerIds, List<LayerOptions>> mapLayerOptions = {
   ],
   MapLayerIds.osm: [
     TileLayerOptions(
-      urlTemplate: "https://accra.trufi.dev/tiles/osm-bright/{z}/{x}/{y}.png",
+      urlTemplate:
+          "https://accra.trufi.dev/tiles/osm-bright/{z}/{x}/{y}@2x.png",
       tileProvider: const CachedTileProvider(),
     ),
   ],
