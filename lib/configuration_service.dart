@@ -49,8 +49,9 @@ Configuration setupConfiguration() {
 
   // Urls
   final urls = UrlCollection(
-    openTripPlannerUrl: "",
-    routeFeedbackUrl: "https://trufifeedback.z15.web.core.windows.net/route.html",
+    openTripPlannerUrl: "https://accra.trufi.dev/otp/routers/default",
+    routeFeedbackUrl:
+        "https://trufifeedback.z15.web.core.windows.net/route.html",
   );
 
   // Map
@@ -70,22 +71,12 @@ Configuration setupConfiguration() {
 
   // Languages
   final languages = [
-    LanguageConfiguration("de", "DE", "Deutsch"),
     LanguageConfiguration("en", "US", "English", isDefault: true),
-    LanguageConfiguration("es", "ES", "Español"),
-    LanguageConfiguration("fr", "FR", "Français"),
-    LanguageConfiguration("it", "IT", "Italiano"),
-    LanguageConfiguration("qu", "BO", "Quechua simi"),
   ];
 
   final customTranslations = TrufiCustomLocalizations()
     ..title = {
-      const Locale("de"): "Trotro App",
       const Locale("en"): "Trotro App",
-      const Locale("es"): "Trotro App",
-      const Locale("fr"): "Trotro App",
-      const Locale("it"): "Trotro App",
-      const Locale("qu"): "Trotro App",
     };
 
   return Configuration(
