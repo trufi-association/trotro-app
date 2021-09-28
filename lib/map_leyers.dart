@@ -30,14 +30,14 @@ extension LayerIdsToString on MapLayerIds {
 Map<MapLayerIds, List<LayerOptions>> mapLayerOptions = {
   MapLayerIds.streets: [
     TileLayerOptions(
-      urlTemplate: "https://accra.trufi.dev/tiles/streets/{z}/{x}/{y}@2x.png",
+      urlTemplate:
+          "https://accra.trufi.dev/maps/klokantech-basic/{z}/{x}/{y}@2x.jpg",
       tileProvider: const CachedTileProvider(),
     ),
   ],
   MapLayerIds.osm: [
     TileLayerOptions(
-      urlTemplate:
-          "https://accra.trufi.dev/tiles/osm-bright/{z}/{x}/{y}@2x.png",
+      urlTemplate: "https://accra.trufi.dev/maps/osm-bright/{z}/{x}/{y}@2x.jpg",
       tileProvider: const CachedTileProvider(),
     ),
   ],
