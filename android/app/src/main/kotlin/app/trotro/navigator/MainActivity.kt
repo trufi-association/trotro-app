@@ -1,4 +1,4 @@
-package com.example.trotro_app
+package app.trotro.navigator
 
 import io.flutter.embedding.android.FlutterActivity
 
