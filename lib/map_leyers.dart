@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:trufi_core/models/map_tile_provider.dart';
+import 'package:trufi_core/base/blocs/map_tile_provider/map_tile_provider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class CachedTileProvider extends TileProvider {
@@ -23,7 +23,7 @@ extension LayerIdsToString on MapLayerIds {
       MapLayerIds.osm: "OSM",
     };
 
-    return enumStrings[this];
+    return enumStrings[this] ?? "Streets";
   }
 }
 
@@ -49,13 +49,13 @@ Map<MapLayerIds, String> layerImage = {
 
 class MapLayer extends MapTileProvider {
   final MapLayerIds mapLayerId;
-  final String mapKey;
+  final String? mapKey;
 
   MapLayer(this.mapLayerId, {this.mapKey}) : super();
 
   @override
   List<LayerOptions> buildTileLayerOptions() {
-    return mapLayerOptions[mapLayerId];
+    return mapLayerOptions[mapLayerId]!;
   }
 
   @override
@@ -63,7 +63,7 @@ class MapLayer extends MapTileProvider {
 
   @override
   WidgetBuilder get imageBuilder => (context) => Image.asset(
-        layerImage[mapLayerId],
+        layerImage[mapLayerId]!,
         fit: BoxFit.cover,
       );
 
