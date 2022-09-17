@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:trotro_app/custom_async_executor.dart';
-import 'package:trotro_app/map_leyers.dart';
+import 'package:trotro_app/rest_request_plan.dart';
+
+import 'package:trufi_core/base/blocs/map_tile_provider/map_tile_provider.dart';
 import 'package:trufi_core/base/blocs/map_configuration/map_configuration_cubit.dart';
 import 'package:trufi_core/base/models/trufi_latlng.dart';
 import 'package:trufi_core/base/utils/certificates_letsencrypt_android.dart';
@@ -22,16 +25,21 @@ void main() async {
       ),
       blocProviders: [
         ...DefaultValues.blocProviders(
-          otpEndpoint: "https://accra.trufi.dev/otp/routers/default",
-          otpGraphqlEndpoint: "https://cbba.trufi.app/otp/index/graphql",
+          otpEndpoint: "https://accra.trufi.dev/otp",
+          otpGraphqlEndpoint: "https://accra.trufi.dev/otp/index/graphql",
           mapConfiguration: MapConfiguration(
             center: const TrufiLatLng(5.574558, -0.214656),
           ),
           searchAssetPath: "assets/data/search.json",
-          photonUrl: "https://cbba.trufi.app/photon",
+          customRequestPlanService: RestTrotroRequestPlanService(
+            otpEndpoint: "https://accra.trufi.dev/otp",
+          ),
+          photonUrl: "https://accra.trufi.dev/photon",
           mapTileProviders: [
-            MapLayer(MapLayerIds.streets),
-            MapLayer(MapLayerIds.osm),
+            OSMMapLayer(
+              mapTilesUrl:
+                  "https://accra.trufi.dev/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg",
+            ),
           ],
         ),
       ],
@@ -58,7 +66,7 @@ void main() async {
           asyncExecutor: customAsyncExecutor,
           shareBaseUri: Uri(
             scheme: "https",
-            host: "accra.trotro.dev",
+            host: "accra.trufi.dev",
           ),
         ),
       ),
