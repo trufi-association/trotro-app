@@ -31,7 +31,9 @@ dependencies:
     sdk: flutter
 
   trufi_core:
-    path: ../trufi-core
+    git:
+      url: https://github.com/trufi-association/trufi-core.git
+      ref: 3.2.0
 
 dev_dependencies:
   flutter_test:
