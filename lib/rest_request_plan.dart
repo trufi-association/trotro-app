@@ -42,6 +42,7 @@ class RestTrotroRequestPlanService implements RequestPlanService {
       // "time": '16:00:00',
       "numItineraries": "5",
       "mode": _parseTransportModes(transportModes),
+      "showIntermediateStops": "true",
     });
     final response = await _fetchRequest(request);
     if (response.statusCode == 200) {
@@ -50,7 +51,7 @@ class RestTrotroRequestPlanService implements RequestPlanService {
       throw FetchOnlineResponseException('Server Error');
     }
   }
-
+  
   Future<http.Response> _fetchRequest(Uri request) async {
     try {
       final packageInfoVersion = await PackageInfoPlatform.version();
