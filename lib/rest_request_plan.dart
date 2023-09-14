@@ -9,6 +9,7 @@ import 'package:trufi_core/base/models/trufi_place.dart';
 import 'package:trufi_core/base/pages/home/services/exception/fetch_online_exception.dart';
 import 'package:trufi_core/base/pages/home/services/request_plan_service.dart';
 import 'package:trufi_core/base/utils/packge_info_platform.dart';
+import 'package:trufi_core/base/utils/trufi_app_id.dart';
 // Workaround for request plan without date
 class RestTrotroRequestPlanService implements RequestPlanService {
   static const String searchPath = '/geocode';
@@ -39,8 +40,9 @@ class RestTrotroRequestPlanService implements RequestPlanService {
     ).replace(queryParameters: {
       "fromPlace": from.toString(),
       "toPlace": to.toString(),
-      // "time": '16:00:00',
-      "numItineraries": "5",
+      "date": _todayMonthDayYear(),
+      "time": '13:00:00',
+      "numItineraries": "7",
       "mode": _parseTransportModes(transportModes),
       "showIntermediateStops": "true",
     });
@@ -54,21 +56,21 @@ class RestTrotroRequestPlanService implements RequestPlanService {
   
   Future<http.Response> _fetchRequest(Uri request) async {
     try {
-      final packageInfoVersion = await PackageInfoPlatform.version();
+    final packageInfoVersion = await PackageInfoPlatform.version();
+    final appName = await PackageInfoPlatform.appName();
+    final uniqueId = TrufiAppId.getUniqueId;
       return await http.get(request, headers: {
-        "User-Agent": "Trufi/$packageInfoVersion",
+          "User-Agent": "Trufi/$packageInfoVersion/$uniqueId/$appName",
       });
     } on Exception catch (e) {
       throw FetchOnlineRequestException(e);
     }
   }
 
-  // String _todayMonthDayYear() {
-  //   final today = DateTime.now();
-  //   return "${today.month.toString().padLeft(2, '0')}-"
-  //           "01-" +
-  //       today.year.toString();
-  // }
+  String _todayMonthDayYear() {
+    final today = DateTime.now();
+    return "${today.month.toString().padLeft(2, '0')}-01-${today.year}";
+  }
 
   String _parseTransportModes(List<TransportMode> list) {
     return list.map((e) => e.name).join(",");
