@@ -28,22 +28,22 @@ void main() async {
       ),
       blocProviders: [
         ...DefaultValues.blocProviders(
-          otpEndpoint: "https://gh-accra.af.api.trufi-association.org/otp",
-          otpGraphqlEndpoint: "https://gh-accra.af.api.trufi-association.org/otp/index/graphql",
+          otpEndpoint: "https://trotro-app.trufi.dev/otp",
+          otpGraphqlEndpoint: "https://trotro-app.trufi.dev/otp/index/graphql",
           mapConfiguration: MapConfiguration(
             center: const TrufiLatLng(5.574558, -0.214656),
           ),
           searchAssetPath: "assets/data/search.json",
           customRequestPlanService: RestTrotroRequestPlanService(
-            otpEndpoint: "https://gh-accra.af.api.trufi-association.org/otp",
+            otpEndpoint: "https://trotro-app.trufi.dev/otp",
           ),
-          photonUrl: "https://gh-accra.af.api.trufi-association.org/photon",
-          mapTileProviders: [
-            OSMMapLayer(
-              mapTilesUrl:
-                  "https://gh-accra.af.api.trufi-association.org/static-maps/basic/{z}/{x}/{y}@2x.jpg",
-            ),
-          ],
+          photonUrl: "https://trotro-app.trufi.dev/photon",
+          // mapTileProviders: [
+          //   OSMMapLayer(
+          //     mapTilesUrl:
+          //         "https://trotro-app.trufi.dev/static-maps/basic/{z}/{x}/{y}@2x.jpg",
+          //   ),
+          // ],
         ),
       ],
       trufiRouter: TrufiRouter(
@@ -69,11 +69,11 @@ void main() async {
           asyncExecutor: customAsyncExecutor,
           shareBaseUri: Uri(
             scheme: "https",
-            host: "gh-accra.af.api.trufi-association.org",
+            host: "trotro-app.trufi.dev",
           ),
           lifecycleReactorHandler: LifecycleReactorNotifications(
             url:
-                'https://gh-accra.af.api.trufi-association.org/static_files/notification.json',
+                'https://trotro-app.trufi.dev/static_files/notification.json',
           ),
         ),
       ),
