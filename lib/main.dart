@@ -38,12 +38,15 @@ void main() async {
             otpEndpoint: "https://trotro-app.trufi.dev/otp",
           ),
           photonUrl: "https://trotro-app.trufi.dev/photon",
-          // mapTileProviders: [
-          //   OSMMapLayer(
-          //     mapTilesUrl:
-          //         "https://trotro-app.trufi.dev/static-maps/basic/{z}/{x}/{y}@2x.jpg",
-          //   ),
-          // ],
+          querySearchParameters: {
+            "bbox": "-0.467963,5.488591,0.036037,5.833565",
+          },
+          mapTileProviders: [
+            OSMMapLayer(
+              mapTilesUrl:
+                  "https://trotro-app.trufi.dev/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg",
+            ),
+          ],
         ),
       ],
       trufiRouter: TrufiRouter(
@@ -72,8 +75,7 @@ void main() async {
             host: "trotro-app.trufi.dev",
           ),
           lifecycleReactorHandler: LifecycleReactorNotifications(
-            url:
-                'https://trotro-app.trufi.dev/static_files/notification.json',
+            url: 'https://trotro-app.trufi.dev/static_files/notification.json',
           ),
         ),
       ),
